@@ -1,4 +1,8 @@
 {
     "baseUrl": "https://www.youtube.com",
-    "watchForFileChanges": false
+    "watchForFileChanges": false,
+    "retries": {
+        "runMode": 1,
+        "openMode": 0
+      }
 }
