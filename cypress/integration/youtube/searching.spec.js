@@ -19,7 +19,8 @@ describe("Searching feature", () => {
     cy.get("@data").then((data) => {
       const searchResultPage = homePage.searchByKeyword(data.keyword);
       searchResultPage.getVideoTitle().should((title) => {
-        expect(title.match(new RegExp(data.keyword, "i")).length).to.be.at.least(1);
+        // expect(title.match(new RegExp(data.keyword, "i")).length).to.be.at.least(1);
+        expect(title).to.match(new RegExp(data.keyword, "i"));
       });
     });
   });

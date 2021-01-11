@@ -14,7 +14,7 @@ export const getTime = (durationStr) => {
 }
 
 export const getAbbreciatedViews = (views) => {
-    const commaCount = views.match(/,/g).length;
+    const commaCount = (views.match(/,/g)||[]).length;
     switch(commaCount) {
       case 1:
       return `${views.split(',')[0]}K views`;
